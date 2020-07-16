@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsUpgrade: JS</title>
+</head>
+<body style="text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; background-color: slategrey;">
+
+    <h1><mark>Javascript Day3 Assignment</mark></h1>
+    <h2 style="padding-top: 50px;"><br>Press f12 to see Grades obtained</h2>
+
+    <script>
+
+function if_else(){
+
+let marks=prompt("Enter the Marks to check");
+
+        if(marks>=85 && marks<=100)
+           console.log(`Marks are ${marks} and Grade is A`);
+        else if(marks<85 && marks>=75)
+          console.log(`Marks are ${marks} and Grade is B`);
+        else if(marks<75 && marks>=65)
+           console.log(`Marks are ${marks} and Grade is C`);
+        else if(marks<65 && marks>=55)
+           console.log(`Marks are ${marks} and Grade is D`);
+        else if(marks<55 && marks>=35)
+            console.log(`Marks are ${marks} and Grade is E`);
+        else if(marks<35)
+            console.log(`Marks are ${marks} and Grade is F`);
+        else
+            console.error("Invalid Marks entered")
+
+}
+
+//2. with Switch Case
+
+function switch_case(){
+
+      let marks1= Number(prompt("Enter the Marks to check using switch case"));
+
+
+      switch (true)
+      {
+      case marks1<35:
+      console.log(`Marks are ${marks1} and Grade is F`);
+      break;
+
+      case marks1<55 && marks1>=35:
+      console.log(`Marks are ${marks1} and Grade is E`);
+      break;
+
+      case marks1<65 && marks1>=55:
+      console.log(`Marks are ${marks1} and Grade is D`);
+      break;
+
+      case marks1<75 && marks1>=65:
+      console.log(`Marks are ${marks1} and Grade is C`);
+      break;
+
+      case marks1<85 && marks1>=75:
+      console.log(`Marks are ${marks1} and Grade is B`);
+      break;
+
+      case marks1>=85 && marks1<=100:
+      console.log(`Marks are ${marks1} and Grade is A`);
+      break;
+
+
+      default:
+      console.error("Invalid Marks entered");
+        }
+}
+
+   
+    
+
+
+    </script>
+
+<button onclick="if_else()">Grade Calculation using if-else</button>
+<button onclick="switch_case()">Grade Calculation using switch</button>
+
+</body>
+    
+</body>
+</html>
