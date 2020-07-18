@@ -251,4 +251,3 @@ return greetingFunction(userName);\par
 var result = displayGreeting(createGreeting, "Peter");\par
 alert(result); // Output: Hello, Peter\lang9\par
 }
- 
