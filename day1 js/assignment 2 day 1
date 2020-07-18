@@ -1,11 +1,11 @@
-Assignment Day 1 | 14th July 2020 1
+
 Assignment Day 1 | 14th July 2020
 TEJASHREE WANKHEDE
 Question 1:
-?? Explore and explain the various methods in console function Explain them Ex. console.log() console.warn(). etcÖ
+?? Explore and explain the various methods in console function Explain them Ex. console.log() console.warn(). etc‚Ä¶
 A Web console is a tool which is mainly used to log information associated with a web page like: network requests,
 javascript, security errors, warnings, CSS etc. It enables us to interact with a web page by executing javascript expression
-in the contents of the page. The Console object provides access to the browserís debugging console. We can open a
+in the contents of the page. The Console object provides access to the browser‚Äôs debugging console. We can open a
 console in web browser by using F12 key in windows.
 Methods:- 1. console.log() For general output of logging information. You may use string substitution and additional
 arguments with this method.
@@ -26,17 +26,17 @@ a level, call groupEnd().
 Execution of these methods are available in the HTML file.
 A Web console is a tool which is mainly used to log information associated with a web page like: network requests,
 javascript, security errors, warnings, CSS etc. It enables us to interact with a web page by executing javascript expression
-in the contents of the page. The Console object provides access to the browserís debugging console. We can open a
+in the contents of the page. The Console object provides access to the browser‚Äôs debugging console. We can open a
 console in web browser by using F12 key in windows.
 Question 2:
 ?? Write the difference between var, let and const with code examples.
 In Javascript one can define variables using the keywords var, let or const. Eg: var a=10; let b=20; const PI?3.14;
-var: The scope of a variable defined with the keyword ìvarî is limited to the ìfunctionî within which it is defined. If it is
-defined outside any function, the scope of the variable is global. var is ìfunction scopedî.
-let: The scope of a variable defined with the keyword ìletî or ìconstî is limited to the ìblockî defined by curly braces
-i.e. {} . ìletî and ìconstî areìblock scopedî.
-const: The scope of a variable defined with the keyword ìconstî is limited to the block defined by curly braces. However
-if a variable is defined with keyword const, it cannot be reassigned. ìconstî cannot be re-assigned to a new value.
+var: The scope of a variable defined with the keyword ‚Äúvar‚Äù is limited to the ‚Äúfunction‚Äù within which it is defined. If it is
+defined outside any function, the scope of the variable is global. var is ‚Äúfunction scoped‚Äù.
+let: The scope of a variable defined with the keyword ‚Äúlet‚Äù or ‚Äúconst‚Äù is limited to the ‚Äúblock‚Äù defined by curly braces
+i.e. {} . ‚Äúlet‚Äù and ‚Äúconst‚Äù are‚Äúblock scoped‚Äù.
+const: The scope of a variable defined with the keyword ‚Äúconst‚Äù is limited to the block defined by curly braces. However
+if a variable is defined with keyword const, it cannot be reassigned. ‚Äúconst‚Äù cannot be re-assigned to a new value.
 However it CAN be mutated.
 Function scoped vs. Block scoped Let us understand this by some code examples,
 Assignment Day 1 | 14th July 2020 2
@@ -55,7 +55,7 @@ within which it is defined. In this case it is within the global function scope 
 In the above example, since we are using the keyword var to define the variable a, the scope of a is limited to the
 function within which it is defined. Since a is not defined within any function, the scope of the variable a is global, which
 means that a is recognized within block 2. In effect if a variable is defined with keyword var, Javascript does not
-recognize the {} as the scope delimiter. Instead the variable must be enclosed within a ìfunctionî to limit itís scope to that
+recognize the {} as the scope delimiter. Instead the variable must be enclosed within a ‚Äúfunction‚Äù to limit it‚Äôs scope to that
 function. Let us re-write the code above using the keyword let. The let keyword was introduced as part of ES6 syntax, as
 an alternative to var to define variables in Javascript.
 {
@@ -87,14 +87,14 @@ console.log(a);
 the scope of "var a=10", is limited to block 1 and "a" is not recognized in block 2 */
 The above code is in effect the same as if we were using let a=10 instead of var a=10. The scope of the variable a is
 limited to the function within which it is defined, and a is no longer in the global namespace.
-Why would you chose ìletî over ìvarî? While programming in Javascript it is a good practice not to define variables as
+Why would you chose ‚Äúlet‚Äù over ‚Äúvar‚Äù? While programming in Javascript it is a good practice not to define variables as
 global variables. This is because it is possible to inadvertently modify the global variable from anywhere within the
 Javascript code. To prevent this one needs to ensure that the scope of the variables are limited to the code block within
 which they need to be executed. In the past before keyword let was introduced as part of ES6, to circumvent the issue of
 variable scoping using var, programmers used the IIFE pattern to prevent the pollution of the global name space. However
 since the introduction of let, the IIFE pattern is no longer required, and the scope of the variable defined using let is
 limited to the code block within which it is defined.
-The ìconstî keyword If a variable is defined using the const keyword, its scope is limited to the block scope. In addition
+The ‚Äúconst‚Äù keyword If a variable is defined using the const keyword, its scope is limited to the block scope. In addition
 the variable cannot be reassigned to a different value.
 Assignment Day 1 | 14th July 2020 3
 {
@@ -146,7 +146,7 @@ There are six basic data types in JavaScript which can be divided into three mai
 composite (or reference), and special data types. String, Number, and Boolean are primitive data types. Object, Array, and
 Function (which are all types of objects) are composite data types. Whereas Undefined and Null are special data types.
 Primitive data types can hold only one value at a time, whereas composite data types can hold collections of values and
-more complex entities. Letís discuss each one of them in detail.
+more complex entities. Let‚Äôs discuss each one of them in detail.
 1. The String Data Type The string data type is used to represent textual data (i.e. sequences of characters). Strings are
 created using single or double quotes surrounding one or more characters, as shown below:
 var a = 'Hi there!'; // using single quotes
@@ -198,7 +198,7 @@ b = null;
 alert(b) // Output: null
 5. The Object Data Type The object is a complex data type that allows you to store collections of data. An object
 contains properties, defined as a key-value pair. A property key (name) is always a string, but the value can be any data
-type, like strings, numbers, booleans, or complex data types like arrays, function and other objects. Youíll learn more
+type, like strings, numbers, booleans, or complex data types like arrays, function and other objects. You‚Äôll learn more
 about objects in upcoming chapters.
 Assignment Day 1 | 14th July 2020 5
 The following example will show you the simplest way to create an object in JavaScript.
@@ -211,7 +211,7 @@ var car = {
 "doors": 5
 }
 You can omit the quotes around property name if the name is a valid JavaScript name. That means quotes are required
-around ìfirst-nameî but are optional around firstname. So the car object in the above example can also be written as:
+around ‚Äúfirst-name‚Äù but are optional around firstname. So the car object in the above example can also be written as:
 var car = {
 modal: "BMW X3",
 color: "white",
