@@ -1,0 +1,254 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Segoe UI Symbol;}{\f2\fnil\fcharset1 Cambria Math;}}
+{\*\generator Riched20 10.0.17763}{\*\mmathPr\mmathFont2\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\f0\fs22\lang9\par
+\b\fs36 Assignment Day 1 | 14th July 2020\par
+
+\pard\sa200\sl276\slmult1\fs32 Tejashree Wankhede\b0\fs22\par
+\b\fs24 Question 1:\b0\fs22\par
+\f1\fs24\u-10179?\u-9055?\f0  Explore and explain the various methods in console function Explain them Ex. console.log() console.warn(). etc\'85\par
+A Web console is a tool which is mainly used to log information associated with a web page like: network requests,\par
+javascript, security errors, warnings, CSS etc. It enables us to interact with a web page by executing javascript expression\par
+in the contents of the page. The Console object provides access to the browser\rquote s debugging console. We can open a\par
+console in web browser by using F12 key in windows.\par
+Methods:- 1. console.log() For general output of logging information. You may use string substitution and additional\par
+arguments with this method.\par
+2. console.warn() Outputs a warning message. You may use string substitution and additional arguments with this\par
+method.\par
+3. console.error() Outputs an error message. You may use string substitution and additional arguments with this method.\par
+4. console.table() Displays tabular data as a table.\par
+5. console.time() Starts a timer with a name specified as an input parameter. Up to 10,000 simultaneous timers can run\par
+on a given page.\par
+6. console.timeEnd() Stops the specified timer and logs the elapsed time in seconds since it started.\par
+7. console.clear() Clear the console.\par
+8. console.count() Log the number of times this line has been called with the given label.\par
+9. console.group() Creates a new inline group, indenting all following output by another level. To move back out a level,\par
+call groupEnd().\par
+10. console.groupCollapsed() Creates a new inline group, indenting all following output by another level. However, unlike\par
+group() this starts with the inline group collapsed requiring the use of a disclosure button to expand it. To move back out\par
+a level, call groupEnd().\par
+Execution of these methods are available in the HTML file.\par
+A Web console is a tool which is mainly used to log information associated with a web page like: network requests,\par
+javascript, security errors, warnings, CSS etc. It enables us to interact with a web page by executing javascript expression\par
+in the contents of the page. The Console object provides access to the browser\rquote s debugging console. We can open a\par
+console in web browser by using F12 key in windows.\par
+\b\fs28 Question 2:\b0\fs24\par
+\f1\u-10179?\u-9143?\f0  Write the difference between var, let and const with code examples.\par
+In Javascript one can define variables using the keywords var, let or const. Eg: var a=10; let b=20; const PI\u-8037?3.14;\par
+var: The scope of a variable defined with the keyword \ldblquote var\rdblquote  is limited to the \ldblquote function\rdblquote  within which it is defined. If it is\par
+defined outside any function, the scope of the variable is global. var is \ldblquote function scoped\rdblquote .\par
+let: The scope of a variable defined with the keyword \ldblquote let\rdblquote  or \ldblquote const\rdblquote  is limited to the \ldblquote block\rdblquote  defined by curly braces\par
+i.e. \{\} . \ldblquote let\rdblquote  and \ldblquote const\rdblquote  are\ldblquote block scoped\rdblquote .\par
+const: The scope of a variable defined with the keyword \ldblquote const\rdblquote  is limited to the block defined by curly braces. However\par
+if a variable is defined with keyword const, it cannot be reassigned. \ldblquote const\rdblquote  cannot be re-assigned to a new value.\par
+However it CAN be mutated.\par
+Function scoped vs. Block scoped Let us understand this by some code examples,\par
+Assignment Day 1 | 14th July 2020 2\par
+Block Scope In Javascript you can define a code block using curly braces i.e \{\}. Consider the following code that has 2\par
+code blocks each delimited by \{\}.\par
+\{\par
+var a=10;\par
+console.log(a);\par
+\} //block 1\par
+\{\par
+a++;\par
+console.log(a);\par
+\} //block 2\par
+/* Since we are using "var a=10", scope of "a" is limited to the function\par
+within which it is defined. In this case it is within the global function scope */\par
+In the above example, since we are using the keyword var to define the variable a, the scope of a is limited to the\par
+function within which it is defined. Since a is not defined within any function, the scope of the variable a is global, which\par
+means that a is recognized within block 2. In effect if a variable is defined with keyword var, Javascript does not\par
+recognize the \{\} as the scope delimiter. Instead the variable must be enclosed within a \ldblquote function\rdblquote  \par
+\par
+to limit it\rquote s scope to that\par
+function. Let us re-write the code above using the keyword let. The let keyword was introduced as part of ES6 syntax, as\par
+an alternative to var to define variables in Javascript.\par
+\{\par
+let a=10;\par
+console.log(a);\par
+\} //block 1\par
+\{\par
+a++;\par
+console.log(a);\par
+\} //block 2\par
+/* Since we are using "let a=10", scope of "a" is limited to block 1 and "a" is not\par
+recognized in block 2 */\par
+Note that now when you run the code above you will get an error, variable a not recognized in block2. This is because we\par
+have defined the variable a using the keyword let, which limits the scope of variable a to the code block within which it\par
+was defined.\par
+Function Scope In Javascript you limit the scope of a variable by defining it within a function. This is known as function\par
+scope. The keyword var is function scoped i.e. it does not recognize curly brackets i.e. \{\}, as delimiters. Instead it\par
+recognizes the function body as the delimiter. If we want to define a variable using var, and prevent it from being defined\par
+in the global namespace you can re-write it by enclosing the code blocks within functions.\par
+function block1() \{\par
+var a=10;\par
+console.log(a);\par
+\} //function scope of block 1\par
+function block2() \{\par
+a++;\par
+console.log(a);\par
+\} //function scope of block 2\par
+/* Since we have enclosed block1 and block2, within separate functions,\par
+the scope of "var a=10", is limited to block 1 and "a" is not recognized in block 2 */\par
+The above code is in effect the same as if we were using let a=10 instead of var a=10. The scope of the variable a is\par
+limited to the function within which it is defined, and a is no longer in the global namespace.\par
+Why would you chose \ldblquote let\rdblquote  over \ldblquote var\rdblquote ? While programming in Javascript it is a good practice not to define variables as\par
+global variables. This is because it is possible to inadvertently modify the global variable from anywhere within the\par
+Javascript code. To prevent this one needs to ensure that the scope of the variables are limited to the code block within\par
+which they need to be executed. In the past before keyword let was introduced as part of ES6, to circumvent the issue of\par
+variable scoping using var, programmers used the IIFE pattern to prevent the pollution of the global name space. However\par
+since the introduction of let, the IIFE pattern is no longer required, and the scope of the variable defined using let is\par
+limited to the code block within which it is defined.\par
+The \ldblquote const\rdblquote  keyword If a variable is defined using the const keyword, its scope is limited to the block scope. In addition\par
+the variable cannot be reassigned to a different value.\par
+Assignment Day 1 | 14th July 2020 3\par
+\{\par
+const PI=3.14;\par
+console.log(PI);\par
+\} //block 1\par
+\{\par
+console.log(PI);\par
+\} //block 2\par
+/* Since we are using "const PI=3.14", scope of "PI" is limited to block 1 and "PI" is\par
+not recognized in block 2 */\par
+Note that it is important to understand that const does NOT mean that the value is fixed and immutable. This is a\par
+common misunderstanding amongst many Javascript developers, and they incorrectly mentioned that a value defined by\par
+the const keyword is immutable (i.e. it cannot be changed). In the following example we can show that the value of the\par
+variable defined within the const keyword is mutable, i.e. it can be changed.\par
+\{\par
+const a = [1,2,3];\par
+const b = \{name: "hello"\};\par
+a.push(4,5); //mutating the value of constant "a"\par
+b.name="World"; //mutating the value of constant "b"\par
+console.log(a); //this will show [1,2,3,4,5]\par
+console.log(b); //this will show \{name: "World"\}\par
+\}\par
+/* This code will run without any errors, and shows that we\par
+CAN mutate the values that are defined by "const" */\par
+However note that these variables defined by const cannot be re-assigned.\par
+\{\par
+const name = "Mike";\par
+const PI = 3.14;\par
+const a = [1,2,3];\par
+const b = \{name: "hello"\};\par
+name="Joe";\par
+/*this will throw an error, since we are attempting to re-assign "name" to a\par
+different value.*/\par
+PI = PI + 1;\par
+/*this will throw an error, since we are attempting to re-assign PI to a\par
+different value.*/\par
+a = [1,2,3,4,5];\par
+/*this will throw an error, since we are attempting to re-assign "a" to a\par
+different value.*/\par
+b = \{name: "hello"\};\par
+/*this will throw an error, since we are attempting to re-assign "b" to a\par
+different value.*/\par
+\}\par
+\b\fs28 Question 3: Write a brief intro on available data types in Javascript.\b0\fs24\par
+Data Types in JavaScript: Data types basically specify what kind of data can be stored and manipulated within a\par
+program.\par
+There are six basic data types in JavaScript which can be divided into three main categories: primitive (or primary),\par
+composite (or reference), and special data types. String, Number, and Boolean are primitive data types. Object, Array, and\par
+Function (which are all types of objects) are composite data types. Whereas Undefined and Null are special data types.\par
+Primitive data types can hold only one value at a time, whereas composite data types can hold collections of values and\par
+more complex entities. Let\rquote s discuss each one of them in detail.\par
+1. The String Data Type The string data type is used to represent textual data (i.e. sequences of characters). Strings are\par
+created using single or double quotes surrounding one or more characters, as shown below:\par
+var a = 'Hi there!'; // using single quotes\par
+var b = "Hi there!"; // using double quotes\par
+/*You can include quotes inside the string as long as they don't match the\par
+enclosing quotes.\par
+*/\par
+var a = "Let's have a cup of coffee."; // single quote inside double quotes\par
+Assignment Day 1 | 14th July 2020 4\par
+var b = 'He said "Hello" and left.'; // double quotes inside single quotes\par
+var c = 'We\\'ll never give up.'; // escaping single quote with backslash\par
+2. The Number Data Type The number data type is used to represent positive or negative numbers with or without\par
+decimal place, or numbers written using exponential notation e.g. 1.5e-4 (equivalent to 1.5\u-8033?10\u-8056?4\u-8062?.\par
+var a = 25; // integer\par
+var b = 80.5; // floating-point number\par
+var c = 4.25e+6; // exponential notation, same as 4.25e6 or 4250000\par
+var d = 4.25e-6; // exponential notation, same as 0.00000425\par
+The Number data type also includes some special values which are: Infinity, \u-8056?Infinity and NaN. Infinity represents the\par
+mathematical Infinity \f2\u8734?\f0 , which is greater than any number. Infinity is the result of dividing a nonzero number by 0, as\par
+demonstrated below:\par
+alert(16 / 0); // Output: Infinity\par
+alert(-16 / 0); // Output: -Infinity\par
+alert(16 / -0); // Output: -Infini\par
+While NaN represents a special Not-a-Number value. It is a result of an invalid or an undefined mathematical operation,\par
+like taking the square root of \u-8056?1 or dividing 0 by 0, etc.\par
+3. The Boolean Data Type The Boolean data type can hold only two values: true or false. It is typically used to store\par
+values like yes (true) or no (false), on (true) or off (false), etc. as demonstrated below:\par
+var isReading = true; // yes, I'm reading\par
+var isSleeping = false; // no, I'm not sleeping\par
+Boolean values also come as a result of comparisons in a program. The following example compares two variables and\par
+shows the result in an alert dialog box:\par
+var a = 2, b = 5, c = 10;\par
+alert(b > a) // Output: true\par
+alert(b > c) // Output: false\par
+The Undefined Data Type The undefined data type can only have one value-the special value undefined. If a variable has\par
+been declared, but has not been assigned a value, has the value undefined.\par
+var a;\par
+var b = "Hello World!"\par
+alert(a) // Output: undefined\par
+alert(b) // Output: Hello World!\par
+4. The Null Data Type This is another special data type that can have only one value-the null value. A null value means\par
+that there is no value. It is not equivalent to an empty string ("") or 0, it is simply nothing. A variable can be explicitly\par
+emptied of its current contents by assigning it the null value.\par
+var a = null;\par
+alert(a); // Output: null\par
+var b = "Hello World!"\par
+alert(b); // Output: Hello World!\par
+b = null;\par
+alert(b) // Output: null\par
+5. The Object Data Type The object is a complex data type that allows you to store collections of data. An object\par
+contains properties, defined as a key-value pair. A property key (name) is always a string, but the value can be any data\par
+type, like strings, numbers, booleans, or complex data types like arrays, function and other objects. You\rquote ll learn more\par
+about objects in upcoming chapters.\par
+Assignment Day 1 | 14th July 2020 5\par
+The following example will show you the simplest way to create an object in JavaScript.\par
+var emptyObject = \{\};\par
+var person = \{"name": "Clark", "surname": "Kent", "age": "36"\};\par
+// For better reading\par
+var car = \{\par
+"modal": "BMW X3",\par
+"color": "white",\par
+"doors": 5\par
+\}\par
+You can omit the quotes around property name if the name is a valid JavaScript name. That means quotes are required\par
+around \ldblquote first-name\rdblquote  but are optional around firstname. So the car object in the above example can also be written as:\par
+var car = \{\par
+modal: "BMW X3",\par
+color: "white",\par
+doors: 5\par
+\}\par
+6. The Array Data Type An array is a type of object used for storing multiple values in single variable. Each value (also\par
+called an element) in an array has a numeric position, known as its index, and it may contain data of any data typenumbers, strings, booleans, functions, objects, and even other arrays. The array index starts from 0, so that the first array\par
+element is arr[0] not arr[1].\par
+The simplest way to create an array is by specifying the array elements as a comma-separated list enclosed by square\par
+brackets, as shown in the example below:\par
+var colors = ["Red", "Yellow", "Green", "Orange"];\par
+var cities = ["London", "Paris", "New York"];\par
+alert(colors[0]); // Output: Red\par
+alert(cities[2]); // Output: New York\par
+7. The Function Data Type The function is callable object that executes a block of code. Since functions are objects, so it\par
+is possible to assign them to variables, as shown in the example below:\par
+var greeting = function()\{\par
+return "Hello World!";\par
+\}\par
+// Check the type of greeting variable\par
+alert(typeof greeting) // Output: function\par
+alert(greeting()); // Output: Hello World!\par
+In fact, functions can be used at any place any other value can be used. Functions can be stored in variables, objects, and\par
+arrays. Functions can be passed as arguments to other functions, and functions can be returned from functions. Consider\par
+the following function:\par
+function createGreeting(name)\{\par
+return "Hello, " + name;\par
+\}\par
+function displayGreeting(greetingFunction, userName)\{\par
+return greetingFunction(userName);\par
+\}\par
+var result = displayGreeting(createGreeting, "Peter");\par
+alert(result); // Output: Hello, Peter\lang9\par
+}
+ 
