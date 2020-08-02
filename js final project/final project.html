@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-size: cover;background-image: url(https://nitrocdn.com/MAzcYbDxaTMXpJGnwJLhfuxpSoqMXlNW/assets/static/source/wp-content/uploads/2018/03/a4105ece6c8e8b6314f486c132c0020a.Wisdom-Quotes-1-768x436.jpg);">
+
+    <!-- just a heading-->
+    <h1><mark>Javascript </mark><mark>: Final Project</mark></h1>
+
+    <!-- Marquee displaying detail of assignment -->
+    <h2><marquee style="background-color:rgb(255, 255, 255);color: black;font-style: italic;"scrollamount=30; >Problem Statement: Generate Random Quotes and display on a web page in a proper format</marquee></h2>
+    <h3>
+    <p id="quote">
+        "the people who are crazy enough to think they can change the world are the ones who do." <br />- Steve Jobs
+    </p>
+    </h3>
+    <button style="height: 50px; width: 100px;" onclick="newQuote()" >New Quote</button>
+    <br>
+    <br>
+    <br>
+   
+     <script>
+
+var quotes = [`"Two things are infinite: the universe and human stupidity; and I'm not sure about the universe." <br />  - Albert Einstein`, `"the people who are crazy enough to think they can change the world are the ones who do." <br /> - Steve Jobs`, `"A man who dares to waste one hour of time has not discovered the value of life." <br /> - Charles Darwin`, `"You cannot teach a man anything; you can only help him discover it in himself." <br /> - Galileo`, `"If I have seen further it is by standing on the shoulders of Giants." <br /> - Isaac Newton`, `"One, remember to look up at the stars and not down at your feet. Two, never give up work. Work gives you meaning and purpose and life is empty without it. Three, if you are lucky enough to find love, remember it is there and don't throw it away." <br /> - Stephen Hawking`, `"Imagination is more important than knowledge." <br /> - Albert Einstein`, `"The saddest aspect of life right now is that gathers knowledge faster than society gathers wisdom." <br /> - Isaac Asimov`, `"Faith is not belief without proof, but trust without reservation." <br /> - D. Elton Trueblood`, `"There's an important difference between giving up and letting go." <br /> - Jessica Hatchigan `, `"I think everybody should get rich and famous and do everything they ever dreamed of so they can see that it's not the answer." <br /> - Jim Carrey `];
+
+function newQuote(){
+    let n = Math.floor(Math.random()*quotes.length);
+    document.getElementById("quote").innerHTML = quotes[n];
+
+}
+
+
+
+
+    </script>
+
+
+</body>
+</html>
